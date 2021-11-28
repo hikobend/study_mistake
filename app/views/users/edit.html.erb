@@ -1,0 +1,22 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+
+<%# formタグを作成 %>
+<%= form_for @user do |f| %>
+
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+
+    <%= f.label :profile %>
+    <%= f.text_field :profile %>
+
+    <%= f.label :profile_image %>
+    <%# attachmentを使っているので、変更する %>
+    <%= f.attachment_field :profile_image %>
+
+    <%= f.submit %>
+
+<% end %>
